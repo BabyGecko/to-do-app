@@ -1,0 +1,151 @@
+html
+    min-height: 100%
+
+body
+    background-image: url("bgimage.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-position: center
+
+form
+    box-shadow: 0 0 20px #00000033
+    background-color: #fff
+    width: 90%
+    max-width: 500px
+    margin: 50px auto 
+    padding: 20px
+    text-align: center
+    box-sizing: border-box
+
+    .tabs
+        padding: 0 10px
+        display: flex
+        justify-content: start
+        align-items: center
+        margin-bottom: 5px
+
+        .tabContainer
+            display: flex
+            width: calc( 100% - 45px )
+            overflow-x: scroll
+
+            &::-webkit-scrollbar
+                width: 5px
+
+            &::-webkit-scrollbar-thumb
+                background: #ededed
+
+            &::-webkit-scrollbar-thumb:hover
+                background: #cccccc
+
+        .tab
+            height: 100%
+            margin: 10px 5px
+            position: relative
+
+        .deleteTab
+            padding: 0
+            visibility: hidden
+            position: absolute
+            top: -8px
+            right: -8px
+            z-index: 1
+            transform: rotate(45deg)
+            width: 15px
+            height: 15px
+
+        .finishTabChange
+            padding: 0
+            position: absolute
+            translate: -30px 15.5px
+            z-index: 1
+
+        .newTab, .deleteTab, .finishTabChange
+            background-color: transparent
+            border: none
+
+        .newTab
+            width: 45px
+            padding-bottom: 15px
+
+        .tab button:first-child
+            background-color: #eeeeee
+            line-height: 14px
+            border-radius: 5px
+            padding: 16px 10px
+            border: none
+            min-width: 90px
+            position: relative
+            white-space: nowrap
+
+        .activeTab
+            background-color: #ccc !important
+
+        .tab:hover .deleteTab
+            visibility: visible
+
+    h1
+        margin: 0
+
+    ol
+        background-color: #f3f3f3
+        width: 90%
+        margin: auto
+        padding: 5px 10px
+        border-radius: 5px
+
+        button
+            background-color: transparent
+            border: none
+            margin-left: 10px
+            width: 16px
+            height: 16px
+            padding: 0
+
+        li
+            display: flex
+            justify-content: space-between
+            background-color: #ffffff
+            margin: auto
+            line-height: 15px
+            box-shadow: 0 0 20px #00000033
+            border-radius: 5px
+            margin: 5px 0
+            padding: 0 10px
+            align-items: center
+
+            p
+                overflow-wrap: break-word
+                max-width: calc( 100% - 52px )
+                cursor: pointer
+
+                &.checked
+                    text-decoration: line-through
+
+            textarea
+                width: calc( 100% - 52px )
+                box-sizing: border-box
+                resize: none
+
+    .inputs
+        width: 94%
+        display: flex
+        justify-content: space-between
+        margin: auto
+        margin-top: 20px
+        align-items: center
+
+        button
+            background-color: transparent
+            border: none
+            margin-left: 10px
+            width: 16px
+            height: 16px
+            padding: 0
+
+        input
+            width: 90%
+            height: 25px
+            border: 2px solid #bbbbbb
+            border-radius: 5px
