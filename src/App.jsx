@@ -11,7 +11,7 @@ function App() {
     [
       {
         id: 0,
-        "tabName": "New Tab"
+        "tabName": "New Tab",
       }
     ]
   )
